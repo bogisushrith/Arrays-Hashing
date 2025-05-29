@@ -22,7 +22,7 @@ public:
                     else if(sum == target)
                     {
                         vector<int>temp = {nums[i], nums[j], nums[k], nums[l]};
-                        answer.push_back(temp);k++;l--;
+                        answer.emplace_back(temp);k++;l--;
                         while(k < l && nums[k] == nums[k-1])k++;
                         while(k < l && nums[l] == nums[l+1])l--;
                     }
@@ -31,4 +31,4 @@ public:
         }
         return answer;
     }
-};
+}
