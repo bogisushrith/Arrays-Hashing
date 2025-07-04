@@ -2,8 +2,7 @@ class Solution {
 public:
     int carFleet(int target, vector<int>& position, vector<int>& speed) {
         map<pair<int, double>, int>mp;
-        int length = position.size();
-        for(int i = 0 ; i < length ; i++)
+        for(int i = 0 ; i < position.size() ; i++)
         {
             int len = target - position[i];
             double time = (static_cast<double>(len) / speed[i]); 
